@@ -1,6 +1,5 @@
 Raspberry Pi Setup related info
 
-
 Installation
 Download newest 64 bit image from: https://downloads.raspberrypi.org/raspios_arm64/images/
 Flash using the official Raspberry Pi imager, no need to unzip.
@@ -15,3 +14,10 @@ Install using: Sudo atp install hardinfo and run benchmarks.
 SD card benchmarking: https://github.com/TheRemote/PiBenchmarks
 Overclocking: https://qengineering.eu/overclocking-the-raspberry-pi-4.html
 USB boot: https://qengineering.eu/install-raspberry-64-os.html
+
+Info
+lscpu > OS_CPU-freq_video-freq.txt
+sudo apt install stress
+pip3 install stressberry --user
+stressberry-run -n "OS_CPU-freq_video-freq" -d 3600 -c4 OS_CPU-freq_video-freq.out
+stressberry-plot -f -l 500 3000 -o OS_CPU-freq_video-freq.out

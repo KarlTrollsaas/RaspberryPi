@@ -1,0 +1,17 @@
+Raspberry Pi Setup related info
+
+
+Installation
+Download newest 64 bit image from: https://downloads.raspberrypi.org/raspios_arm64/images/
+Flash using the official Raspberry Pi imager, no need to unzip.
+Insert SD card in Raspberry Pi, run config wizard at poweron and reboot.
+
+Configuration
+Patch using: Sudo atp update, Sudo atp upgrade, Sudo atp autoremove and Sudo atp clean.
+Set screen resolution to 1920x1080.
+
+Benchmark
+Install using: Sudo atp install hardinfo and run benchmarks.
+SD card benchmarking: https://github.com/TheRemote/PiBenchmarks
+Overclocking: https://qengineering.eu/overclocking-the-raspberry-pi-4.html
+USB boot: https://qengineering.eu/install-raspberry-64-os.html

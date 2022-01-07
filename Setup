@@ -9,6 +9,9 @@ Configuration
 Patch using: Sudo atp update, Sudo atp upgrade, Sudo atp autoremove and Sudo atp clean.
 Set screen resolution to 1920x1080.
 
+Firmware check: sudo rpi-eeprom-update
+Firmware/kernel update: sudo rpi-update
+
 Benchmark
 Install using: Sudo atp install hardinfo and run benchmarks.
 SD card benchmarking: https://github.com/TheRemote/PiBenchmarks
@@ -21,3 +24,15 @@ sudo apt install stress
 pip3 install stressberry --user
 stressberry-run -n "OS_CPU-freq_video-freq" -d 3600 -c4 OS_CPU-freq_video-freq.out
 stressberry-plot -f -l 500 3000 -o OS_CPU-freq_video-freq.out
+
+Monitoring
+whatch -n1 vcgencmd measure_temp
+whatch -n1 vcgencmd measure_volts
+whatch -n1 vcgencmd measure_clock arm
+
+Overclocking
+sudo nano /boot/config.txt
+  over_voltage=4
+  arm_freq=2000
+  gpu_freq=600
+(use shift during boot to disable if not working)
